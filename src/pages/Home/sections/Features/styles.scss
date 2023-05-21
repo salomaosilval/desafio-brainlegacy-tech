@@ -1,0 +1,40 @@
+.featuresContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1f1efb;
+  padding: 3rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    height: max-content;
+  }
+
+  .featuresMockupContainer {
+    img {
+      width: 40rem;
+    }
+  }
+
+  .listFeaturesContainer {
+    ul {
+      list-style: none;
+
+      li {
+        font-size: 2rem;
+        color: var(--white);
+        font-weight: bold;
+
+        &:not(:last-child) {
+          margin-bottom: 5rem;
+        }
+      }
+    }
+
+    img {
+      width: 2rem;
+      margin-right: 1rem;
+    }
+  }
+}
