@@ -1,0 +1,96 @@
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  padding: 3rem;
+
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .plansCardContainer {
+    display: flex;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .planCard {
+      position: relative;
+      width: 30rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+
+      @media (max-width: 600px) {
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 4rem;
+        }
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        font-size: 1.6rem;
+
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      img {
+        width: 1.6rem;
+        margin-right: 0.5rem;
+      }
+
+      .buttonContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          margin: 0 auto;
+          margin-top: 5rem;
+          background-color: #1f1efb;
+          border: none;
+          padding: 1.5rem;
+          border-radius: 1rem;
+          color: var(--white);
+          font-size: 1.6rem;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
